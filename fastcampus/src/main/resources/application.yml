@@ -25,12 +25,12 @@ spring:
     properties:
       hibernate.format_sql: true
       hibernate.default_batch_fetch_size: 100
-  h2:
-    console:
-      enabled: true
   sql:
     init:
       mode: always
+  data.rest:
+    base-path: /api
+    detection-strategy: annotated #@Repository 애노테이션을 붙은 레포지토리만 api로 노출
 
 #---
 #

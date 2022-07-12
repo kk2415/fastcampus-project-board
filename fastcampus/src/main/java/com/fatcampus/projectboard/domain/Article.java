@@ -1,5 +1,6 @@
 package com.fatcampus.projectboard.domain;
 
+import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 import org.springframework.data.annotation.CreatedBy;
@@ -9,11 +10,11 @@ import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Objects;
 import java.util.Set;
 
+@Getter
 @ToString
 @Table(name = "article",
         indexes = {
@@ -22,15 +23,14 @@ import java.util.Set;
         @Index(columnList = "createAt"),
         @Index(columnList = "createBy")
 })
-@EntityListeners(AuditingEntityListener.class)
 @Entity
-public class Article {
+public class Article extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Setter @Column(nullable = false) private String title;
-    @Setter @Column(nullable = false, length = 10_000) private String content;
+    @Setter @Column(nullable = false, length = 10000) private String content;
     @Setter private String hashtag;
 
 
@@ -38,11 +38,6 @@ public class Article {
     @ToString.Exclude
     @OneToMany(mappedBy = "article", cascade = CascadeType.ALL)
     private final Set<ArticleComment> articleComments = new LinkedHashSet<>();
-
-    @CreatedDate @Column(nullable = false) private LocalDateTime createAt;
-    @CreatedBy @Column(nullable = false, length = 100) private String createBy;
-    @LastModifiedDate @Column(nullable = false) private LocalDateTime updateAt;
-    @LastModifiedBy @Column(nullable = false, length = 100) private String updateBy;
 
     public Set<ArticleComment> getArticleComments() {
         return articleComments;
