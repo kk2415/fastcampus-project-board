@@ -1,14 +1,13 @@
-package com.fastcampus.projectboard.controller;
+package com.fatcampus.projectboard.controller;
 
-import com.fastcampus.projectboard.domain.constant.FormStatus;
-import com.fastcampus.projectboard.domain.constant.SearchType;
-import com.fastcampus.projectboard.dto.UserAccountDto;
-import com.fastcampus.projectboard.dto.request.ArticleRequest;
-import com.fastcampus.projectboard.dto.response.ArticleResponse;
-import com.fastcampus.projectboard.dto.response.ArticleWithCommentsResponse;
-import com.fastcampus.projectboard.dto.security.BoardPrincipal;
-import com.fastcampus.projectboard.service.ArticleService;
-import com.fastcampus.projectboard.service.PaginationService;
+import com.fatcampus.projectboard.domain.constant.FormStatus;
+import com.fatcampus.projectboard.domain.constant.SearchType;
+import com.fatcampus.projectboard.dto.request.ArticleRequest;
+import com.fatcampus.projectboard.dto.response.ArticleResponse;
+import com.fatcampus.projectboard.dto.response.ArticleWithCommentsResponse;
+import com.fatcampus.projectboard.dto.security.BoardPrincipal;
+import com.fatcampus.projectboard.service.ArticleService;
+import com.fatcampus.projectboard.service.PaginationService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

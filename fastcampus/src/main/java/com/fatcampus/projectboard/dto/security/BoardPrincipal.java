@@ -1,6 +1,6 @@
 package com.fatcampus.projectboard.dto.security;
 
-import com.fastcampus.projectboard.dto.UserAccountDto;
+import com.fatcampus.projectboard.dto.UserAccountDto;
 import lombok.Getter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

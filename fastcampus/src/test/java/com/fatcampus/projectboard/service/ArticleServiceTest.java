@@ -3,7 +3,11 @@ package com.fatcampus.projectboard.service;
 import com.fatcampus.projectboard.domain.Article;
 import com.fatcampus.projectboard.domain.UserAccount;
 import com.fatcampus.projectboard.domain.constant.SearchType;
+import com.fatcampus.projectboard.dto.ArticleDto;
+import com.fatcampus.projectboard.dto.ArticleWithCommentsDto;
+import com.fatcampus.projectboard.dto.UserAccountDto;
 import com.fatcampus.projectboard.repository.ArticleRepository;
+import com.fatcampus.projectboard.repository.UserAccountRepository;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -174,7 +178,6 @@ class ArticleServiceTest {
         ArticleDto dto = createArticleDto();
         given(userAccountRepository.getReferenceById(dto.userAccountDto().userId())).willReturn(createUserAccount());
         given(articleRepository.save(any(Article.class))).willReturn(createArticle());
-        given(articleRepository.save(any(Article.class)))
 
         // When
         sut.saveArticle(dto);

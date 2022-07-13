@@ -1,7 +1,8 @@
 package com.fatcampus.projectboard.dto.request;
 
-import com.fastcampus.projectboard.dto.ArticleCommentDto;
-import com.fastcampus.projectboard.dto.UserAccountDto;
+
+import com.fatcampus.projectboard.dto.ArticleCommentDto;
+import com.fatcampus.projectboard.dto.UserAccountDto;
 
 public record ArticleCommentRequest(Long articleId, String content) {
 

@@ -1,6 +1,7 @@
 package com.fatcampus.projectboard.dto.response;
 
-import com.fastcampus.projectboard.dto.ArticleCommentDto;
+
+import com.fatcampus.projectboard.dto.ArticleCommentDto;
 
 import java.time.LocalDateTime;
 

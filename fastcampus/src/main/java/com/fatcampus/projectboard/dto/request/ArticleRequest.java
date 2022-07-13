@@ -1,7 +1,8 @@
 package com.fatcampus.projectboard.dto.request;
 
-import com.fastcampus.projectboard.dto.ArticleDto;
-import com.fastcampus.projectboard.dto.UserAccountDto;
+
+import com.fatcampus.projectboard.dto.ArticleDto;
+import com.fatcampus.projectboard.dto.UserAccountDto;
 
 public record ArticleRequest(
         String title,
