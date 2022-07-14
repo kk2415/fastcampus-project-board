@@ -37,11 +37,3 @@ Spring Boot
 ## 데모 페이지
 
 *  https://project-board-uno.herokuapp.com/
-
-## 질문, 건의
-
-프로젝트에 관해 궁금하신 점이나 건의 사항이 있으시다면 아래 항목을 이용해 주세요.
-
-* 질문: https://fastcampus.co.kr/qna/211368/1
-* 버그 리포트, 제안 사항: https://github.com/djkeh/fastcampus-project-board/issues
-
