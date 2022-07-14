@@ -5,6 +5,7 @@ import com.fatcampus.projectboard.dto.ArticleCommentDto;
 import com.fatcampus.projectboard.dto.request.ArticleCommentRequest;
 import com.fatcampus.projectboard.service.ArticleCommentService;
 import com.fatcampus.projectboard.util.FormDataEncoder;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

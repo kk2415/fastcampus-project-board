@@ -8,6 +8,7 @@ import com.fatcampus.projectboard.dto.ArticleWithCommentsDto;
 import com.fatcampus.projectboard.dto.UserAccountDto;
 import com.fatcampus.projectboard.repository.ArticleRepository;
 import com.fatcampus.projectboard.repository.UserAccountRepository;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,6 +29,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.*;
 import static org.mockito.BDDMockito.then;
 
+@Disabled
 @DisplayName("비즈니스 로직 - 게시글")
 @ExtendWith(MockitoExtension.class)
 class ArticleServiceTest {
