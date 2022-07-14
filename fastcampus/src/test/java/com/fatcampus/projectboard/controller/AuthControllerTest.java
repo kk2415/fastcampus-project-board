@@ -3,6 +3,7 @@ package com.fatcampus.projectboard.controller;
 import com.fatcampus.projectboard.config.TestSecurityConfig;
 import com.fatcampus.projectboard.service.ArticleService;
 import com.fatcampus.projectboard.service.PaginationService;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@Disabled
 @DisplayName("View 컨트롤러 - 인증")
 @Import(TestSecurityConfig.class)
 @WebMvcTest(Void.class)
