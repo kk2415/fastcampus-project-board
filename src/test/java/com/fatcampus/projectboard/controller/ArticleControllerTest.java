@@ -68,6 +68,7 @@ class ArticleControllerTest {
      * UserDetailsService에 접근하지 않음
      * 컨트롤러에서 인증유저로 추가로 수행하는 작업이 없을 때만 이 애노테이션 사용
      */
+//    @WithMockUser(roles = {"ADMIN"}, username = "admin", password = "admin")
     @WithMockUser
     @DisplayName("[view][GET] 새 게시글 작성 페이지")
     @Test
