@@ -18,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashSet;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -87,7 +88,7 @@ public class ArticleController {
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
             ArticleRequest articleRequest
     ) {
-        articleService.saveArticle(articleRequest.toDto(boardPrincipal.toDto()));
+        articleService.saveArticle(articleRequest.toDto(boardPrincipal.toDto(), new LinkedHashSet<>()));
 
         return "redirect:/articles";
     }
@@ -108,7 +109,7 @@ public class ArticleController {
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
             ArticleRequest articleRequest
     ) {
-        articleService.updateArticle(articleId, articleRequest.toDto(boardPrincipal.toDto()));
+        articleService.updateArticle(articleId, articleRequest.toDto(boardPrincipal.toDto(), new LinkedHashSet<>()));
 
         return "redirect:/articles/" + articleId;
     }
