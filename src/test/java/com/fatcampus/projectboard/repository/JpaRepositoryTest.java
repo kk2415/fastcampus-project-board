@@ -60,7 +60,7 @@ class JpaRepositoryTest {
         // Given
         long previousCount = articleRepository.count();
         UserAccount userAccount = userAccountRepository.save(UserAccount.of("newUno", "pw", null, null, null));
-        Article article = Article.of(userAccount, "new article", "new content", "#spring");
+        Article article = Article.of(userAccount, "new article", "new content");
 
         // When
         articleRepository.save(article);
@@ -74,14 +74,11 @@ class JpaRepositoryTest {
     void givenTestData_whenUpdating_thenWorksFine() {
         // Given
         Article article = articleRepository.findById(1L).orElseThrow();
-        String updatedHashtag = "#springboot";
-        article.setHashtag(updatedHashtag);
 
         // When
         Article savedArticle = articleRepository.saveAndFlush(article);
 
         // Then
-        assertThat(savedArticle).hasFieldOrPropertyWithValue("hashtag", updatedHashtag);
     }
 
     @DisplayName("delete 테스트")
